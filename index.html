@@ -29,7 +29,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8 cart">
+            <div class="col-lg-10 cart">
             
                 <!-- <div class="title">
                     <div class="row">
@@ -41,8 +41,20 @@
 
                 <div class="title">
                     <div class="row">
-                        <div class="col"><h2>SHOPPING BAG</h2></div>
-                        <div class="col text-muted">2 ITEMS</div>
+                        <div class="col"><h2>SHOPPING BAG</h2>
+                            <div class="col text-muted">2 ITEMS</div>
+                        </div>   
+                    </div>
+                </div>
+
+                <div class="title">
+                    <div class="row">
+                        <div class="col-md-5"><h3>Products</h3></div> 
+                        <div class="col md-5"><h3>Price</h3></div>
+                        <div class="col mr-5"><h3>Quantity</h3></div>        
+                        <div class="col mr-5"><h3>Total</h3></div>
+                        <div class="col"><h3>Delete</h3></div>
+                          
                     </div>
                 </div>
 
@@ -52,15 +64,66 @@
                         <div class="col-2"><img src="images/skin-4.jpeg" alt="" class="image-fluid"></div>
                         <div class="col">
                             <div class="row"><h4>La Roche Posay</h4></div>
-                            <div class="row"><p>Vitamin C10 Serum <em>30ml</em</p></div>
+                            <div class="row"><p>Vitamin C10 Serum <em>30ml</em></p></div>
                         </div>
                         <div class="col">
-                            <
+                            <div class="row"><h5>R 650</h5></div>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-color btn-lg" id="btn_quantity">- 1 +</button>
+                        </div>
+                        <div class="col">
+                            <div class="row"><h5>R 650</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="row"><i class="fa-regular fa-trash-can"></i></div>
                         </div>
                     </div>
                 </div>
 
+                 <!-- Item 2 -->
+                <div class="row border-top border-bottom">
+                    <div class="row products align-items-center">
+                        <div class="col-2"><img src="images/skin-3.jpeg" alt="" class="image-fluid"></div>
+                        <div class="col">
+                            <div class="row"><h4>COSRX</h4></div>
+                            <div class="row"><p>Advanced Snail Mucin Gel Cleanser <em>150ml</em></p> </div>
+                        </div>
+                        <div class="col">
+                            <div class="row"><h5>R 450</h5></div>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-color btn-lg" id="btn_quantity">- 2 +</button>
+                        </div>
+                        <div class="col">
+                            <div class="row"><h5>R 900</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="row"><i class="fa-regular fa-trash-can"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue Shopping -->
+                <div><button type="button" class="btn btn_main btn-lg btn-color" id="btn_main"><a href="products.html">Continue Shopping</a></button></div>
+
             </div>
+
+            <!-- Cart Totals -->
+            <div class="col-lg-2 cart_total">
+                <div><h3>CART TOTALS</h3></div>
+                <hr>
+                <div class="row">
+                    <div class="col" style="padding-left:0;">Subtotal</div>
+                    <div class="col text-right text-muted">R 1550</div>
+                </div>
+                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                    <div class="col">Total</div>
+                    <div class="col text-right">R 1550</div>
+                </div>
+
+            </div>
+
         </div>
     </div>
 

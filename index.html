@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skincare Shopping Cart</title>
 
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
        <!-- Bootstrap CDN -->
        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+       <!-- Google Font -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
            <!-- Font Awesome Link -->
     <script src="https://kit.fontawesome.com/e340ea6f4b.js" crossorigin="anonymous"></script>
     
-
-
 </head>
 <body>
     <header>
@@ -46,7 +52,7 @@
                 <h4>La Roche Posay</h4>
                 <p>Vitamin C10 Serum <em>30ml</em></p>
                 <p>R650</p>
-                <button class="btn_quantity" id="btn_quantity">- 1 +</button>
+                <button type="button" class="btn btn-color btn-lg" id="btn_quantity">- 1 +</button>
                 <p>R650</p>
                 <i class="fa-regular fa-trash-can"></i>
             </div>
@@ -58,14 +64,14 @@
                 <h4>COSRX</h4>
                 <p>Advanced Snail Mucin Gel Cleanser <em>150ml</em></p>
                 <p>R450</p>
-                <button class="btn_quantity" id="btn_quantity">- 2 +</button>
+                <button type="button" class="btn btn-color btn-lg" id="btn_quantity">- 2 +</button>
                 <p>R900</p>
                 <i class="fa-regular fa-trash-can"></i>
             </div>
 
             <hr>
 
-            <button class="btn_btn_main" id="btn_btn_main"><a href="products.html">Continue Shopping</a></button>
+            <button type="button" class="btn btn_main btn-color" id="btn_main"><a href="products.html">Continue Shopping</a></button>
 
 
         </div>
@@ -79,7 +85,7 @@
             <hr>
             <h3>Total</h3>
             <p>R1550</p>
-            <button class="btn_btn_main" id="btn_btn_main">Proceed to Checkout</button>
+            <button type="button" class="btn btn_main btn-color" id="btn_main">Proceed to Checkout</button>
         </div>
 
 

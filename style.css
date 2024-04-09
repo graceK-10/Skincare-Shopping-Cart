@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Open Sans", sans-serif; */
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --font-default:  "Open Sans", sans-serif; 
+    --font-primary: "Playfair Display", serif;
+    --font-secondary: "Poppins", sans-serif;
+}
+  
+  /* Colors */
+:root {
+    --color-default: #222222;
+    --color-primary: #E2B9B9;
+    --color-secondary: #F3EFEF;
+}
+
+.btn.btn-color {
+    background-color: var(--color-primary); /* Use primary color as background */
+
+}
+
+.btn.btn-color:hover{
+    background-color: var(--color-primary);
+}

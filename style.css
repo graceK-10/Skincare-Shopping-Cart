@@ -19,6 +19,7 @@
     --color-default: #222222;
     --color-primary: #E2B9B9;
     --color-secondary: #F3EFEF;
+    --color-gray: #c0b8b8;
 }
 
 .btn.btn-color {
@@ -27,6 +28,15 @@
 }
 
 .btn.btn-color:hover{
+    background-color: var(--color-primary);
+}
+
+.btn.btn_header{
+    background-color: var(--color-gray);
+    padding: 5px;
+}
+
+.btn.btn_header:hover{
     background-color: var(--color-primary);
 }
 

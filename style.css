@@ -61,6 +61,7 @@ body{
     border: transparent;
 }
 
+
 @media(max-width:767px){
     .card{
         margin: 3vh auto;
@@ -143,6 +144,11 @@ img:hover {
     -webkit-transform: scale(3.1); /* For Safari and older versions of Chrome */
     -moz-transform: scale(3.1); /* For Firefox */
     -ms-transform: scale(3.1); /* For IE */
+}
+
+.img_products{
+    width: 8.5rem;
+    transition: transform 0.3s ease;
 }
 
 .btn.btn_main{

@@ -147,8 +147,19 @@ img:hover {
 }
 
 .img_products{
-    width: 8.5rem;
-    transition: transform 0.3s ease;
+    width: 9rem;
+    height: auto;
+    transition: transform .2s;
+}
+
+.img_products:hover {
+    justify-content: center;
+    top: 30%;
+    left: 90%;
+    transform: translate(-50%, -50%) scale(2.5);
+    -webkit-transform: scale(2.5); /* For Safari and older versions of Chrome */
+    -moz-transform: scale(2.5); /* For Firefox */
+    -ms-transform: scale(2.5); /* For IE */
 }
 
 .btn.btn_main{
@@ -159,8 +170,12 @@ img:hover {
     margin-left: 85px;
 }
 
-a{
+.btn a{
     color: #000;
     text-decoration: none;
 }
 
+.icon{
+    font-size: 40px;
+    color: #ce9b9b;
+}

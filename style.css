@@ -33,7 +33,7 @@
 
 .btn.btn_header{
     background-color: var(--color-gray);
-    padding: 5px;
+    margin-top: 0;
 }
 
 .btn.btn_header:hover{
@@ -52,7 +52,7 @@ body{
     margin-top: 0;
 }
 
-.container{
+.products-container{
     margin: 0 auto;
     max-width: 1800px;
     width: 100%;
@@ -132,7 +132,8 @@ body{
 }
 
 img{
-    width: 6.5rem;
+    width: 17.5rem;
+    height: auto;
     transition: transform 0.3s ease;
 }
 
@@ -140,26 +141,27 @@ img:hover {
     justify-content: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(3.1);
-    -webkit-transform: scale(3.1); /* For Safari and older versions of Chrome */
-    -moz-transform: scale(3.1); /* For Firefox */
-    -ms-transform: scale(3.1); /* For IE */
+    transform: translate(-50%, -50%) scale(1.5);
+    -webkit-transform: scale(1.5); /* For Safari and older versions of Chrome */
+    -moz-transform: scale(1.5); /* For Firefox */
+    -ms-transform: scale(1.5); /* For IE */
+    opacity: 0.7;
 }
 
 .img_products{
     width: 9rem;
     height: auto;
-    transition: transform .2s;
+    transition: transform .3s ease;
 }
 
 .img_products:hover {
     justify-content: center;
     top: 30%;
     left: 90%;
-    transform: translate(-50%, -50%) scale(2.5);
-    -webkit-transform: scale(2.5); /* For Safari and older versions of Chrome */
-    -moz-transform: scale(2.5); /* For Firefox */
-    -ms-transform: scale(2.5); /* For IE */
+    transform: translate(-50%, -50%) scale(1.5);
+    -webkit-transform: scale(1.5); /* For Safari and older versions of Chrome */
+    -moz-transform: scale(1.5); /* For Firefox */
+    -ms-transform: scale(1.5); /* For IE */
 }
 
 .btn.btn_main{

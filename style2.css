@@ -1,0 +1,94 @@
+:root {
+    --font-default:  "Open Sans", sans-serif; 
+    --font-primary: "Playfair Display", serif;
+    --font-secondary: "Poppins", sans-serif;
+}
+  
+  /* Colors */
+:root {
+    --color-default: #222222;
+    --color-primary: #E2B9B9;
+    --color-secondary: #F3EFEF;
+    --color-gray: #c0b8b8;
+}
+
+body{
+	background: #ddb5b5;
+}
+
+.title h2{
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.cart{
+	margin: 20px 0;
+	background-color: #F6F5FA;;
+	padding: 60px 0;
+}
+.total-price{
+	padding-bottom: 15px;
+}
+.cart-item{
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 15px 20px;
+	margin-bottom: 20px;
+}
+.center-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+img{
+    width: 17.5rem;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+
+
+.cart-item img{
+	width: 115px;
+}
+.cart-item h5{
+    padding: 0 10px;
+}
+.cart-item .row .col-md-5 h4 {
+    text-align: right;
+}
+
+.cart-item .remove-item{
+	width: 25px!important;
+}
+.btn-default{
+	background-color: #fff;
+}
+.cart-item .form-control{
+	background-color: #ce9b9b;
+	border: none;
+    width: 65px;
+    border-radius: 10px!important;
+    font-weight: 700;
+    font-size: 20px;
+}
+.input-group{
+	width: unset;
+	flex-wrap: nowrap;
+}
+
+.input-group .btn {
+    margin-right: auto; /* This will push the button to the right */
+}
+
+.status{
+	text-align: right;
+}
+.check-out{
+    float: right;
+    padding: 10px 30px;
+	font-size: 19px;
+	background-color: #2FBE70;
+	border: none;
+}

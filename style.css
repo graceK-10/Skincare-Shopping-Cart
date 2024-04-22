@@ -141,15 +141,15 @@ img:hover {
     justify-content: center;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.5);
+    -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5); /* For Safari and older versions of Chrome */
     -moz-transform: scale(1.5); /* For Firefox */
-    -ms-transform: scale(1.5); /* For IE */
+    transform: translate(-50%, -50%) scale(1.5); /* For IE */
     opacity: 0.7;
 }
 
 .img_products{
-    width: 9rem;
+    width: 5rem;
     height: auto;
     transition: transform .3s ease;
 }
@@ -158,10 +158,10 @@ img:hover {
     justify-content: center;
     top: 30%;
     left: 90%;
-    transform: translate(-50%, -50%) scale(1.5);
+    -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5); /* For Safari and older versions of Chrome */
     -moz-transform: scale(1.5); /* For Firefox */
-    -ms-transform: scale(1.5); /* For IE */
+    transform: translate(-50%, -50%) scale(1.5); /* For IE */
 }
 
 .btn.btn_main{

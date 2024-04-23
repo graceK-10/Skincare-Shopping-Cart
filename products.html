@@ -21,9 +21,8 @@
         
 </head>
 <body>
-
     
-
+    <section>
     <div class="container">
 
         <!-- SkinCare / Login / Help Headings -->
@@ -31,17 +30,33 @@
             <div class="row align-items-center my-4">
                 <div class="col">
                     <h1>SKINCARE</h1>
+        <!-- Add to cart-->
                 </div>
-                <div class="col-auto ml-auto">
-                    <button type="button" class="btn btn_header btn-lg ml-auto">LOGIN</button>
-                    <button type="button" class="btn btn_header btn-lg ml-auto">HELP</button>
-                </div>
-</div>
-</div>
-            <div class="row">
 
-        <!-- Product 1 -->
-        <div class="col-lg-3">
+                <div class="col-auto ml-auto">  
+                    <div class="d-flex align-items-center">
+                    <a href="index.html" class="ml-auto"><i class="icon-cart fa-solid fa-cart-shopping"></i></a>  
+                    <button type="button" class="btn btn_header btn-lg">LOGIN</button>
+                    <div class="mx-4">
+                        <button type="button" class="btn btn_header btn-lg">HELP</button>
+                    </div>                  
+                </div>
+                </div>      
+            </div>
+        </div>
+
+
+    <div class="cart-products">
+        <div class="col-md-12 col-lg-10 mx-auto">
+
+
+        
+        <div class="cart-item">
+        <div class="row">
+
+    <!-- Product 1 -->
+        <div class="col-lg-6">
+            <div class="product-container d-flex justify-content-center">
             <div class="product-background">
                 <img class="img_products" src="images/skin-8.jpeg" alt="">
                 <h4>Maaemo</h4>
@@ -50,21 +65,29 @@
                 <button type="button" class="btn btn_add btn-color btn-lg " id="btn_add">ADD TO CART</button>
             </div>
         </div>
+    </div>
 
-        <!-- Product 2 -->
-        <div class="col-lg-3">
+    <!-- Product 2 -->
+        <div class="col-lg-6">
+            <div class="product-container d-flex justify-content-center">
             <div class="product-background">
             <img class="img_products" src="images/skin-4.jpeg">
             <h4>La Roche Posay</h4>
             <p>Vitamin C10 Serum <em>30ml</em></p>
             <h6>R650</h6>
             <button type="button" class="btn btn_add btn-color btn-lg " id="btn_add">ADD TO CART</button>
+          </div>
         </div>
-        </div>
-    
+    </div>
+</div>
 
+<br>
+<br>
+
+        <div class="row">
         <!-- Product 3 -->
-            <div class="col-lg-3">
+            <div class="col-lg-6">
+                <div class="product-container d-flex justify-content-center">
             <div class="product-background">
             <img class="img_products" src="images/skin-6.jpeg">
             <h4>COSRX</h4>
@@ -73,9 +96,11 @@
             <button type="button" class="btn btn_add btn-color btn-lg " id="btn_add">ADD TO CART</button>
         </div>
     </div>
+</div>
 
         <!-- Product 4 -->
-        <div class="col-lg-3">
+        <div class="col-lg-6">
+        <div class="product-container d-flex justify-content-center">
          <div class="product-background">
             <img class="img_products" src="images/skin-9.jpeg">
             <h4>La Roche Posay</h4>
@@ -85,16 +110,15 @@
         </div>
     </div>
 </div>
+</div>
+</div>
 
-        <hr>
 
-     <!-- Add to cart-->
-     <div class="col-lg-12 text-center">
-        <button type="button" class="btn btn_main btn-lg btn-color my-4" id="btn_main"><a href="index.html">Add To Cart</a></button>
-    </div>
+
 
         </div>
-
+    </div>
+    </section>
 
 
 

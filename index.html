@@ -25,122 +25,112 @@
 </head>
 <body>
 
-    
-
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-lg-10 cart">
-
-
-                <div class="title">
-                    <div class="row align-items-center">
-                        <div class="col"><h2>SHOPPING BAG</h2>
-                            <div class="col text-muted">2 ITEMS</div>
-                        </div>   
-                        <div class="col-auto ml-auto">
-                            <button type="button" class="btn btn_header btn-lg ml-auto">LOGIN</button>
-                            <button type="button" class="btn btn_header btn-lg ml-auto">HELP</button>
-                        </div>
-                    </div>
+     <section>
+      <div class="container">
+         
+         <div class="title">
+            <div class="row align-items-center my-4">
+                <div class="col"><h2 class="p-2">MY SHOPPING CART</h2>
+                    <div class="col text-muted">2 ITEMS</div>
+                </div>   
+                <div class="col-auto ml-auto">
+                    <button type="button" class="btn btn_header btn-lg ml-auto">LOGIN</button>
+                    <button type="button" class="btn btn_header btn-lg ml-auto">HELP</button>
                 </div>
-<br>
+            </div>
+        </div>
+
+
+         <div class="cart">
+            <div class="col-md-12 col-lg-10 mx-auto">
+
                 <div class="title mb-2">
                     <div class="row">
                         <div class="col-md-5"><h3>Products</h3></div> 
                         <div class="col md-5"><h3>Price</h3></div>
                         <div class="col mr-5"><h3>Quantity</h3></div>        
-                        <div class="col mr-5"><h3>Total</h3></div>
                         <div class="col"><h3>Delete</h3></div>
                           
                     </div>
                 </div>
 
                 <!-- Item 1 -->
-                <div class="row border-top border-bottom">
-                    <div class="row products align-items-center">
-                        <div class="col-2"><img src="images/skin-4.jpeg" alt="" class="image-fluid">
-                            <div class="row"><h4>La Roche Posay</h4></div>
-                            <div class="row"><p>Vitamin C10 Serum <em>30ml</em></p></div>
-                        </div>
+               <div class="cart-item">
+                  <div class="row">
+                     <div class="col-md-5 center-item">
+                        <div>
+                        <img src="images/skin-4.jpeg" alt="" class="image-fluid">
+                        <h5>La Roche Posay</h5>
+                        <h6>Vitamin C10 Serum <br><em>30ml</em></h6>
                     </div>
-
-                        <div class="col">
-                            <div class="row"><h5>R 650</h5></div>
+                     </div>
+                     <div class="col-md-2 center-item">
+                        <h4>R 650</h4>
+                     </div>
+                     <div class="col-md-3 center-item">
+                        <div class="input-group number-spinner">
+                            <button type="button" id="btn_quantity" class="btn btn_quantity"><i class="fa-solid fa-minus"></i></button>
+                           <input id="product1" type="number" min="0" class="form-control text-center" value="1">
+                           <button type="button" id="btn_quantity" class="btn btn_quantity"><i class="fa-solid fa-plus"></i></button>
                         </div>
-                        <div class="col">
-                            <button type="button" class="btn btn_quantity btn-color btn-lg" id="btn_quantity">- 1 +</button>
-                        </div>
-                        <div class="col">
-                            <div class="row total-price"><h5>R 650</h5></div>
-                        </div>
-                        <div class="col">
-                            <div class="row"><i class="icon fa-regular fa-trash-can"></i></div>
-                        </div>
-                    </div>
-                </div>
-
-                 <!-- Item 2 -->
-                <div class="row border-top border-bottom">
-                    <div class="row products align-items-center">
-                        <div class="col-2"><img src="images/skin-3.jpeg" alt="" class="image-fluid">
-                            <div class="row"><h4>COSRX</h4></div>
-                            <div class="row"><p>Advanced Snail Mucin Gel Cleanser <em>150ml</em></p> </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="row"><h5>R 450</h5></div>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn_quantity btn-color btn-lg" id="btn_quantity">- 2 +</button>
-                        </div>
-                        <div class="col">
-                            <div class="row total-price"><h5>R 900</h5></div>
-                        </div>
-                        <div class="col">
-                            <div class="row" >
+                        <div class="col-md-2 center-item">
                             <i class="icon fa-regular fa-trash-can"></i>
-                            </div>
                         </div>
-                    </div>
-                </div>
+                  </div>
+               </div>
 
-                <!-- Continue Shopping -->
-                <div><button type="button" class="btn btn_main btn-lg btn-color" id="btn_main"><a href="products.html">Continue Shopping</a></button></div>
-
+               <!-- Item 2 -->
+               <div class="cart-item">
+                  <div class="row">
+                     <div class="col-md-5 center-item">
+                        <div>
+                            <img src="images/skin-3.jpeg" alt="" class="image-fluid">
+                            <h5>COSRX</h5>
+                            <h6>Advanced Snail Mucin Gel Cleanser <br><em>150ml</em></h6>
+                        </div>
+                     </div>
+                     <div class="col-md-2 center-item">
+                        <h4>R 900</h4>
+                     </div>
+                     <div class="col-md-3 center-item">
+                        <div class="input-group number-spinner">
+                            <button type="button" id="btn_quantity" class="btn btn_quantity"><i class="fa-solid fa-minus"></i></button>
+                           <input id="product1" type="number" min="0" class="form-control text-center" value="2">
+                           <button type="button" id="btn_quantity" class="btn btn_quantity"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="col-md-2 center-item">
+                            <i class="icon fa-regular fa-trash-can"></i>
+                        </div>
+                  </div>
+               </div>
             </div>
+         </div>
+                              <!-- Cart Totals -->
+                              <div class="cart-item-container mt-4">
+                                <div class="row g-2">
+              
+                                   <div class="col-6">
+                                      <h5>Subtotal: </h5>
+                                      <h5>Total:</h5>
+                                   </div>
+              
+                                    <div class="col-6 status">
+                                      <h5>R<span id="sub-total">1,550</span></h5>
+                                      <h5>R<span id="total-price">1,550</span></h5>
+                                   </div>
+                                   
+                                </div>                             
+                             </div>
+                              <div class="col-md-12 pt-4 pb-4 d-flex justify-content-between">
+                                 <button type="button" class="btn btn-lg btn-color checkout" id="btn_main"><a href="products.html">Continue Shopping</a></button>
+                                    <button type="button" class="btn btn-lg btn-color checkout" id="btn_main">Check Out</button>
+                                 </div>
+      </div>
 
-        <!-- Cart Totals -->
-            
-            <div class="col-lg-2 cart_total">
-                <div class="title"></div>
-                <div><h3>CART TOTALS</h3></div>
-                <hr>
-                <br>
-                <div class="row">
-                    <div class="col">Subtotal</div>
-                    <div class="col text-right text-muted">R 1550</div>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <br>
-                    <div class="col">Total</div>
-                    <div class="col text-right">R 1550</div>
-                </div>
-                <div class="text-center">
-                <button onclick="displayMessage()" type="button" class="btn btn_main btn-lg btn-color" id="btn_main">Checkout</button>
-            </div>
-            </div>
+                        </div>
+   </section>
 
-
-        </div>
-        </div>
-
-
-
-
-
-
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -150,4 +140,3 @@
 
 </body>
 </html>
-

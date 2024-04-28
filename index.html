@@ -30,7 +30,7 @@
          
          <div class="title">
             <div class="row align-items-center my-4">
-                <div class="col"><h2 class="p-2">MY SHOPPING CART</h2>
+                <div class="col"><h2 class="p-2">SKIN°CARE | CART</h2>
                     <div class="col text-muted">2 ITEMS</div>
                 </div>   
                 <div class="col-auto ml-auto">
@@ -46,18 +46,18 @@
 
                 <div class="title mb-2">
                     <div class="row">
-                        <div class="col-md-5"><h3>Products</h3></div> 
-                        <div class="col md-5"><h3>Price</h3></div>
-                        <div class="col mr-5"><h3>Quantity</h3></div>        
-                        <div class="col"><h3>Delete</h3></div>
-                          
+                        <div class="col-md-4"><h3>Products</h3></div> 
+                        <div class="col-md-2"><h3 >Price</h3></div>
+                        <div class="col-md-2"><h3>Quantity</h3></div>       
+                        <div class="col-md-2"><h3>Total</h3></div> 
+                        <div class="col-md-1"><h3>Delete</h3></div>                          
                     </div>
                 </div>
 
                 <!-- Item 1 -->
                <div class="cart-item">
                   <div class="row">
-                     <div class="col-md-5 center-item">
+                     <div class="col-md-4 center-item">
                         <div>
                         <img src="images/skin-4.jpeg" alt="" class="image-fluid">
                         <h5>La Roche Posay</h5>
@@ -67,22 +67,25 @@
                      <div class="col-md-2 center-item">
                         <h4>R 650</h4>
                      </div>
-                     <div class="col-md-3 center-item">
+                     <div class="col-md-2 center-item">
                         <div class="input-group number-spinner">
                             <button type="button" id="btn_quantity" class="btn btn_quantity"><i class="fa-solid fa-minus"></i></button>
-                           <input id="product1" type="number" min="0" class="form-control text-center" value="1">
+                           <input id="quantity" type="number" min="0" class="form-control text-center" value="1">
                            <button type="button" id="btn_quantity" class="btn btn_quantity"><i class="fa-solid fa-plus"></i></button>
                         </div>
-                        <div class="col-md-2 center-item">
+                    </div>
+                    <div class="col-md-2 center-item">
+                        <h4>R 650</h4>
+                     </div>
+                        <div class="col-md-1 center-item">
                             <i class="icon fa-regular fa-trash-can"></i>
                         </div>
-                  </div>
+                  
                </div>
 
                <!-- Item 2 -->
-               <div class="cart-item">
                   <div class="row">
-                     <div class="col-md-5 center-item">
+                     <div class="col-md-4 center-item">
                         <div>
                             <img src="images/skin-3.jpeg" alt="" class="image-fluid">
                             <h5>COSRX</h5>
@@ -90,20 +93,23 @@
                         </div>
                      </div>
                      <div class="col-md-2 center-item">
-                        <h4>R 900</h4>
+                        <h4>R 450</h4>
                      </div>
-                     <div class="col-md-3 center-item">
+                     <div class="col-md-2 center-item">
                         <div class="input-group number-spinner">
-                            <button type="button" id="btn_quantity" class="btn btn_quantity"><i class="fa-solid fa-minus"></i></button>
-                           <input id="product1" type="number" min="0" class="form-control text-center" value="2">
-                           <button type="button" id="btn_quantity" class="btn btn_quantity"><i class="fa-solid fa-plus"></i></button>
+                            <button type="button" id="quantity" class="btn btn_quantity"><i class="fa-solid fa-minus"></i></button>
+                           <input id="product2" type="number" min="0" class="form-control text-center" value="1">
+                           <button type="button" id="quantity" class="btn btn_quantity"><i class="fa-solid fa-plus"></i></button>
                         </div>
+                    </div>
                         <div class="col-md-2 center-item">
+                            <h4>R 450</h4>
+                         </div>
+                        <div class="col-md-1 center-item">
                             <i class="icon fa-regular fa-trash-can"></i>
                         </div>
-                  </div>
+                  
                </div>
-            </div>
          </div>
                               <!-- Cart Totals -->
                               <div class="cart-item-container mt-4">
@@ -111,12 +117,10 @@
               
                                    <div class="col-6">
                                       <h5>Subtotal: </h5>
-                                      <h5>Total:</h5>
                                    </div>
               
                                     <div class="col-6 status">
                                       <h5>R<span id="sub-total">1,550</span></h5>
-                                      <h5>R<span id="total-price">1,550</span></h5>
                                    </div>
                                    
                                 </div>                             
@@ -137,6 +141,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
+    <script src="main.js"></script>
 
 </body>
 </html>

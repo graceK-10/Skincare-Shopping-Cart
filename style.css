@@ -226,3 +226,105 @@ input[type=number]::-webkit-outer-spin-button {
     padding-top: 1.5rem;
 }
 
+@media screen and (max-width: 880px) {
+    .container{
+        padding-left: 35px;
+        padding-right: 15px;
+    }
+     .btn.btn_header{
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+        font-size: 16px; 
+    }
+    .cart{
+        margin: 20px 5px;
+	    padding-left: 20px;
+        padding-right: 20px;
+        width: 150%;
+    }
+    .title.mb-2 h3{
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    .cart-item{
+        padding: 20px 25px;
+        margin: 20px 10px 10px 20px;
+    }
+    .cart-item-container{
+        padding: 15px 20px;
+        margin: 20px 10px 10px 20px;
+    }
+    .btn.btn-lg{
+        padding: 6px 14px; /* Adjust padding for smaller screens */
+        font-size: 16px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .qty.input-group{
+        font-size: 5px; /* Example size */
+    }
+    .cart-price-total{
+        margin-left: 40px;
+    }
+    .product-container .img_products {
+        width: 14rem;
+    }
+    .icon-delete{
+        font-size: 25px;
+        margin-left: 55px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .title h2{
+        font-size: 30px;
+    }
+    .col-auto .btn.btn_header{
+        padding: 6px 14px; /* Adjust padding for smaller screens */
+        font-size: 12px; 
+    }
+    .title.mb-2 h3{
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    .container{
+        padding-left: 35px;
+        padding-right: 15px;
+    }
+
+    .cart{
+        margin: 20px 5px;
+	    padding-left: 20px;
+        padding-right: 20px;
+        width: 150%;
+    }
+
+    .cart-item{
+        padding: 20px 25px;
+        margin: 20px 10px 10px 20px;
+    }
+    .cart-item-container{
+        padding: 15px 20px;
+        margin: 20px 10px 10px 20px;
+    }
+    .btn.btn-lg{
+        padding: 6px 14px; /* Adjust padding for smaller screens */
+        font-size: 16px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .qty.input-group{
+        font-size: 5px; /* Example size */
+    }
+    .cart-price-total{
+        margin-left: 40px;
+    }
+    .product-container .img_products {
+        width: 14rem;
+    }
+    .icon-delete{
+        font-size: 25px;
+        margin-left: 55px;
+    }
+}
+
+

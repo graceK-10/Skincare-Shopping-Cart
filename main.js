@@ -1,186 +1,99 @@
-// Function that adds items to the shopping cart. This function will:
-// --> Retrieve the entered quantity from the input field
-// --> Update the shopping cart's contents with the new quantity
-// --> Calculate the total cost based on the quantity and the product's price
-addToCartBtn = document.getElementsByClassName('btn_add');
-mainContainer = document.getElementsByClassName('product')[0];
-quantityFields = document.getElementsByClassName('form-control')
-detete_buttons = document.getElementsByClassName('icon-delete')
+// Function to add an item to the cart
+function addToCart(event, productId) {
+  // Get the product information
+  let product = document.getElementById(`product_${productId}`);
+  let title = product.querySelector(".img-title").innerText;
+  let description = product.querySelector("p").innerText;
+  let price = parseFloat(
+    product.querySelector("h6").innerText.replace("R", "")
+  );
+  let imageSrc = product.querySelector(".img_products").getAttribute("src");
 
-for(let i = 0; i < addToCartBtn.length; i++) {
-addToCartBtn[i].addEventListener('click', addToCart);
-}
+  // Create a new cart item
+  let cartItem = document.createElement("div");
+  cartItem.classList.add("row", "cart-item-row");
+  cartItem.innerHTML = `
+    <div class="col-md-4 center-item">
+      <div>
+        <img src="${imageSrc}" alt="" class="image-fluid" />
+        <h5 class="item-title">${title}</h5>
+        <p class="item-description">${description}</p>
+      </div>
+    </div>
+    <div class="col-md-2 center-item">
+      <h4 class="cart-price">R${price}</h4>
+    </div>
+    <div class="qty col-md-2 center-item">
+      <div class="input-group number-spinner">
+        <button type="button" class="btn btn-quantity-minus">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+        <input type="number" min="0" class="form-control text-center quantity" value="1" />
+        <button type="button" class="btn btn-quantity-plus">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-2 center-item">
+      <h4 class="cart-price-total">R${price}</h4>
+    </div>
+    <div class="col-md-1 center-item">
+      <i class="icon-delete fa-regular fa-trash-can"></i>
+    </div>
+  `;
 
-// This function helps to add items to our cart
-function addToCart(event) {
+  // Append the new cart item to the cart
+  let cartContainer = document.querySelector(".cart .col-md-12");
+  let cartItemContainer = cartContainer.querySelector(".cart-item");
+  cartItemContainer.appendChild(cartItem);
 
-  let itemContainer = document.createElement('div')
-  let btn = event.target;
-  let btnParent = btn.parentElement
-  let btnSecondParent = btn.parentElement.parentElement;
- 
-  let itemName = btnSecondParent.children[1].innerText;
-  let itemPrice = btnSecondParent.children[3].innerText;
-  let itemImage = btnParent.children[0].src;
- 
+  // Add event listeners for quantity change and delete
+  cartItem
+    .querySelector(".btn-quantity-minus")
+    .addEventListener("click", function () {
+      let input = cartItem.querySelector(".quantity");
+      if (parseInt(input.value) > 0) {
+        input.value = parseInt(input.value) - 1;
+        updateCartItemTotal(cartItem);
+        updateCartTotal();
+      }
+    });
 
+  cartItem
+    .querySelector(".btn-quantity-plus")
+    .addEventListener("click", function () {
+      let input = cartItem.querySelector(".quantity");
+      input.value = parseInt(input.value) + 1;
+      updateCartItemTotal(cartItem);
+      updateCartTotal();
+    });
 
- itemContainer.innerHTML = `
- <div class="product-background">
- <img src=${itemImage} class="img_products"  alt="Maaemo Hydrating Face Cream">
- <h4 class="img-title">${itemName}</h4>
- <p>Hydrating Face Cream <em>100ml</em></p>
- <h6 id="maaemoPrice">${itemPrice}</h6>
- <div class="text-center">
-     <button type="button" class="btn btn_add btn-color btn-lg text-center" onclick="addToCart(event, 1)">ADD TO CART</button>
- </div>
-</div>`;
-
-
-
-// let total = calculateTotal(itemPrice, quantity);
-// Append the new item container to the cart
- 
-// Append the new item container to the cart
-//  cartItemContainer = document.querySelector('.cart .cart-item');
- mainContainer.appendChild(itemContainer);
-
-     // Accessing individual quantity fields
-     for(let i = 0; i < quantityFields.length; i++){
-      quantityFields[i].value = 1
-      quantityFields[i].addEventListener('change', totalCost)
-              
-  }
-
-  // Accessing individual quantity fields
-  for(let i = 0; i < delete_buttons.length; i++){
-      delete_buttons[i].addEventListener('click', removeItem)
-  }
- 
- // Update the total cost displayed in the cart
-//  updateCartTotal(total);
-grandTotal() 
- }
-
- // This function helps to multiply the quantity and the price
-function totalCost(event){
-  let quantity = event.target
-  quantityParent = quantity.parentElement.parentElement
-  priceField = quantityParent.getElementsByClassName('item-price')[0]
-  totalField = quantityParent.getElementsByClassName('total-price')[0]
-  priceFieldContent = priceField.innerText.replace('R', '')
-  totalField.children[0].innerText = 'R' +  quantity.value * priceFieldContent
-  grandTotal()
-  if(isNaN(quantity.value)|| quantity.value <= 0){
-      quantity.value = 1
-  }
-}
-
-
-// This function helps to add up the total of the items
-function grandTotal(){
-  let total = 0
-  let grandTotal = document.getElementsByClassName('grand-total')[0]
-  all_total_fields = document.getElementsByClassName('total-price')
-  for(let i = 0; i < all_total_fields.length; i++){
-      all_prices = Number(all_total_fields[i].innerText.replace('$', ''))
-      total += all_prices
-  }
-  grandTotal.children[0].innerText = "R" + total
-  grandTotal.children[0].style.fontWeight = 'bold'
-  console.log(total)
-}
-
-
-
-// Another Function that will handle removing items from the shopping cart which will:
-// --> Clear the shopping carts contents
-// --> Reset the total cost to zero
-if (document.readyState == 'loading') {
-  document.addEventListener('DOMContentLoaded', ready)
-} else {
-  ready()
-}
-
-function ready() {
-  // Making sure the delete icon works
-  removeCartItemButtons = document.getElementsByClassName('icon-delete');
-// console.log(removeCartItemButtons);
-
-for(let i = 0; i < removeCartItemButtons.length; i++) {
-  let icon = removeCartItemButtons[i];
-  icon.addEventListener('click', function(event) {
-    let iconClicked = event.target; 
-    iconClicked.parentElement.parentElement.remove();
-    updateCartTotal();
-  })
-}
-}
-
-// A Function to:
-// --> Update the displayed shopping cart contents and 
-// total cost in the HTML
-
-// When checkout button is clicked, cart will update
-document.addEventListener('DOMContentLoaded', function() {
-  const checkoutButton = document.getElementById('btn_main');
-  checkoutButton.addEventListener('click', function() {
+  cartItem.querySelector(".icon-delete").addEventListener("click", function () {
+    cartItem.parentNode.removeChild(cartItem);
     updateCartTotal();
   });
-});
+}
 
-// Update cart total when removing an item
+// Function to update the total price of a cart item
+function updateCartItemTotal(cartItem) {
+  let price = parseFloat(
+    cartItem.querySelector(".cart-price").innerText.replace("R", "")
+  );
+  let quantity = parseInt(cartItem.querySelector(".quantity").value);
+  let totalPrice = price * quantity;
+  cartItem.querySelector(".cart-price-total").innerText =
+    "R" + totalPrice.toFixed(2);
+}
+
+// Function to update the overall cart total
 function updateCartTotal() {
-  let cartItemContainer = document.getElementsByClassName('cart-item')[0];
-  let cartRows = cartItemContainer.getElementsByClassName('row');
+  let cartItems = document.querySelectorAll(".cart-item-row");
   let total = 0;
-
-  for(let i = 0; i < cartRows.length; i++) {
-    cartRow = cartRows[i];
-    let priceElement = cartRow.getElementsByClassName('cart-price')[0];
-    let quantityElement = cartRow.getElementsByClassName('form-control')[0];
-    // console.log(priceElement, quantityElement);
-
-    // When an item is removed, price will be updated
-    let price = parseFloat(priceElement.innerText.replace('R', ''));
-    let quantity = parseInt(quantityElement.value);
-    total += price * quantity;
-  }
-  document.getElementsByClassName('cart-total')[0].innerText = total;
+  cartItems.forEach(function (item) {
+    let totalPrice = parseFloat(
+      item.querySelector(".cart-price-total").innerText.replace("R", "")
+    );
+    total += totalPrice;
+  });
+  document.querySelector(".cart-total").innerText = total.toFixed(2);
 }
-
-
-
-// Add and Subtract cart item quantity
- addButton = Array.from(document.getElementsByClassName('btn-quantity-plus'));
- subtractButton = Array.from(document.getElementsByClassName('btn-quantity-minus'));
- 
- // Total Price Calculation for quantity increment/decrement
-
-// Adding event listeners to each plus button
-addButton.forEach(btn => {
-  btn.addEventListener('click', function(event) {
-    const buttonClicked = event.target;
-    const input = buttonClicked.parentElement.querySelector('input[type="number"]');
-    let inputValue = parseInt(input.value);
-    let newValue = inputValue + 1;
-    input.value = newValue;
-
-   updatePriceTotal(); 
-  });
-});
-
-// Adding event listeners to each minus button
-subtractButton.forEach(btn => {
-  btn.addEventListener('click', function(event) {
-    const buttonClicked = event.target;
-    const input = buttonClicked.parentElement.querySelector('input[type="number"]');
-    let inputValue = parseInt(input.value);
-    if (inputValue > 0) { 
-      let newValue = inputValue - 1;
-      input.value = newValue;
-
-      updatePriceTotal(); 
-    }
-  });
-});

@@ -34,67 +34,51 @@
     ></script>
   </head>
   <body>
-    <section>
-      <div class="container">
-        <div class="title">
-          <div class="row align-items-center my-4">
-            <div class="col">
-              <h2 class="p-2">SKIN°CARE | CART</h2>
-            </div>
-            <div class="col-auto ml-auto">
-              <button type="button" class="btn btn_header btn-lg ml-auto">
-                LOGIN
-              </button>
-              <button type="button" class="btn btn_header btn-lg ml-auto">
-                HELP
-              </button>
-            </div>
+  
+<section>
+    <!-- Shopping Cart container -->
+  <div class="container">
+    <div class="title">
+      <div class="row align-items-center my-4">
+        <div class="col">
+          <h2 class="p-2">SKIN°CARE | CART</h2>
+        </div>
+        <div class="col-auto ml-auto">
+          <button type="button" class="btn btn_header btn-lg ml-auto">LOGIN</button>
+          <button type="button" class="btn btn_header btn-lg ml-auto">HELP</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart">
+      <div class="col-md-12 col-lg-10 mx-auto">
+        <div class="title mb-2">
+          <div class="row">
+            <div class="col-md-4"><h3>Products</h3></div>
+            <div class="col-md-2"><h3>Price</h3></div>
+            <div class="col-md-2"><h3>Quantity</h3></div>
+            <div class="col-md-2"><h3>Total</h3></div>
+            <div class="col-md-1"><h3>Delete</h3></div>
           </div>
         </div>
 
-        <div class="cart">
-          <div class="col-md-12 col-lg-10 mx-auto">
-            <div class="title mb-2">
-              <div class="row">
-                <div class="col-md-4"><h3>Products</h3></div>
-                <div class="col-md-2"><h3>Price</h3></div>
-                <div class="col-md-2"><h3>Quantity</h3></div>
-                <div class="col-md-2"><h3>Total</h3></div>
-                <div class="col-md-1"><h3>Delete</h3></div>
-              </div>
+            <!-- Item 1 -->
+      <div class="cart-item"></div>
+            <!-- Cart Totals -->
+      <div class="cart-item-container mt-4">
+          <div class="row g-2">
+            <div class="col-6">
+                <h5 class="item-subtotal">SubTotal:</h5>
             </div>
 
-            <!-- Item 1 -->
-            <div class="cart-item"></div>
-            <!-- Cart Totals -->
-            <div class="cart-item-container mt-4">
-              <div class="row g-2">
-                <div class="col-6">
-                  <h5 class="item-subtotal">SubTotal:</h5>
-                  <!-- <h5 class="item-price">R1,550 </h5> -->
-                </div>
-
-                <div class="col-6 status">
+            <div class="col-6 status">
                   <h5>R<span class="cart-total">0</span></h5>
-                  <!-- <h5>R<span class="total-price">1,550</span></h5> -->
                 </div>
               </div>
             </div>
             <div class="col-md-12 pt-4 pb-4 d-flex justify-content-between">
-              <button
-                type="button"
-                class="btn btn-lg btn-color checkout"
-                id="btn_main"
-              >
-                <a href="#">Continue Shopping</a>
-              </button>
-              <button
-                type="button"
-                class="btn btn-lg btn-color checkout"
-                id="btn_main"
-              >
-                Check Out
-              </button>
+              <button type="button" class="btn btn-lg btn-color checkout" id="btn_main"><a href="#">Continue Shopping</a></button>
+              <button type="button" class="btn btn-lg btn-color checkout" id="btn_main">Check Out</button>
             </div>
           </div>
         </div>
@@ -103,79 +87,38 @@
 
     <section>
       <div class="container">
-        <!-- SkinCare / Login / Help Headings -->
-        <div class="title my-2">
-          <!-- <div class="row align-items-center my-4">
-            <div class="col">
-              <h2 class="p-2">SKIN°CARE | PRODUCTS</h2>
-              <div class="col text-muted">PRODUCTS</div>
-            </div>
 
-            <div class="col-auto ml-auto">
-              <div class="d-flex align-items-center">
-                <a href="index.html" class="ml-auto"
-                  ><i class="icon-cart fa-solid fa-cart-shopping"></i
-                ></a>
-                <button type="button" class="btn btn_header btn-lg">
-                  LOGIN
-                </button>
-                <div class="mx-4">
-                  <button type="button" class="btn btn_header btn-lg">
-                    HELP
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div> -->
-        </div>
-
-        <div class="cart-products">
-          <div class="col-md-12 col-lg-10 mx-auto">
-            <div class="cart-item">
-              <div class="row">
+    <div class="cart-products">
+      <div class="col-md-12 col-lg-10 mx-auto">
+        <div class="cart-item">
+          <div class="row">
                 <!-- Product 1 -->
-                <div class="product col-lg-6" id="product_1">
-                  <div class="product-container d-flex justify-content-center">
-                    <div class="product-background">
-                      <img
-                        src="images/skin-8.jpeg"
-                        class="img_products"
-                        alt="Maaemo Hydrating Face Cream"
-                      />
+            <div class="product col-lg-6" id="product_1">
+              <div class="product-container d-flex justify-content-center">
+                <div class="product-background">
+                  <img src="images/skin-8.jpeg" class="img_products" alt="Maaemo Hydrating Face Cream"/>
                       <h4 class="img-title">Maaemo</h4>
                       <p>Hydrating Face Cream <em>100ml</em></p>
                       <h6 id="maaemoPrice">R350</h6>
-                      <div class="text-center">
-                        <button
-                          type="button"
-                          class="btn btn_add btn-color btn-lg text-center"
-                          onclick="addToCart(event, 1)"
-                        >
-                          ADD TO CART
-                        </button>
-                      </div>
-                    </div>
+                  <div class="text-center">
+                    <button type="button" class="btn btn_add btn-color btn-lg text-center" onclick="addToCart(event, 1)">ADD TO CART</button>
                   </div>
                 </div>
+              </div>
+            </div>
 
                 <!-- Product 2 -->
-                <div class="product col-lg-6" id="product_2">
-                  <div class="product-container d-flex justify-content-center">
-                    <div class="product-background">
+            <div class="product col-lg-6" id="product_2">
+              <div class="product-container d-flex justify-content-center">
+                <div class="product-background">
                       <img class="img_products" src="images/skin-4.jpeg" />
                       <h4 class="img-title">La Roche Posay</h4>
                       <p>Vitamin C10 Serum <em>30ml</em></p>
                       <h6 id="posayPrice">R650</h6>
-                      <div class="text-center">
-                        <button
-                          type="button"
-                          class="btn btn_add btn-color btn-lg text-center"
-                          onclick="addToCart(event, 2)"
-                        >
-                          ADD TO CART
-                        </button>
-                      </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn_add btn-color btn-lg text-center" onclick="addToCart(event, 2)">ADD TO CART+</button>
                     </div>
+                </div>
                   </div>
                 </div>
               </div>
@@ -193,13 +136,7 @@
                       <p>Retinol B3 Serum <em>30ml</em></p>
                       <h6>R770</h6>
                       <div class="text-center">
-                        <button
-                          type="button"
-                          class="btn btn_add btn-color btn-lg text-center"
-                          onclick="addToCart(event, 3)"
-                        >
-                          ADD TO CART
-                        </button>
+                        <button type="button" class="btn btn_add btn-color btn-lg text-center" onclick="addToCart(event, 3)">ADD TO CART</button>
                       </div>
                     </div>
                   </div>
@@ -214,18 +151,15 @@
                       <p>Snail Mucin Gel Cleanser <em>150ml</em></p>
                       <h6>R450</h6>
                       <div class="text-center">
-                        <button
-                          type="button"
-                          class="btn btn_add btn-color btn-lg text-center"
-                          onclick="addToCart(event, 4)"
-                        >
-                          ADD TO CART
-                        </button>
+                        <button type="button" class="btn btn_add btn-color btn-lg text-center" onclick="addToCart(event, 4)">ADD TO CART</button>
                       </div>
                     </div>
                   </div>
                 </div>
+
+
               </div>
+
             </div>
           </div>
         </div>
@@ -235,8 +169,8 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
